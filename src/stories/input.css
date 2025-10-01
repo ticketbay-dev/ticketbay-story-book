@@ -1,0 +1,185 @@
+/* Ticketbay Input Component - Based on Figma mo/input/text */
+
+.ticketbay-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.ticketbay-input-container--mobile {
+  max-width: 100%;
+}
+
+/* Input Label */
+.ticketbay-input__label {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-gray-800);
+  margin-bottom: 4px;
+}
+
+/* Input Wrapper */
+.ticketbay-input__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Base Input Styles */
+.ticketbay-input {
+  width: 100%;
+  border: 2px solid;
+  border-radius: 12px;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--color-white);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.ticketbay-input--mobile {
+  min-height: 56px;
+  padding: 16px 20px;
+  font-size: 16px;
+}
+
+/* Input States */
+
+/* Empty State */
+.ticketbay-input--empty {
+  border-color: var(--color-gray-300);
+  color: var(--color-gray-500);
+  background-color: var(--color-white);
+}
+
+.ticketbay-input--empty::placeholder {
+  color: var(--color-gray-400);
+}
+
+.ticketbay-input--empty:hover {
+  border-color: var(--color-gray-400);
+}
+
+/* Focus State */
+.ticketbay-input--focus,
+.ticketbay-input:focus {
+  border-color: var(--color-ticket-magenta);
+  box-shadow: 0 0 0 3px rgba(255, 0, 120, 0.1);
+}
+
+/* Writing State */
+.ticketbay-input--writing {
+  border-color: var(--color-ticket-magenta);
+  color: var(--color-gray-900);
+  background-color: var(--color-white);
+}
+
+.ticketbay-input--writing::placeholder {
+  color: var(--color-gray-300);
+}
+
+/* Written State */
+.ticketbay-input--writen {
+  border-color: var(--color-gray-300);
+  color: var(--color-gray-900);
+  background-color: var(--color-white);
+}
+
+/* Error States */
+.ticketbay-input--empty_error,
+.ticketbay-input--writing_error,
+.ticketbay-input--writen_error {
+  border-color: var(--color-red-6);
+  background-color: var(--color-red-0);
+}
+
+.ticketbay-input--empty_error:focus,
+.ticketbay-input--writing_error:focus,
+.ticketbay-input--writen_error:focus {
+  border-color: var(--color-red-6);
+  box-shadow: 0 0 0 3px rgba(250, 82, 82, 0.1);
+}
+
+/* Success States */
+.ticketbay-input--writen_successful,
+.ticketbay-input--writing_successful {
+  border-color: var(--color-green-6);
+  background-color: var(--color-green-0);
+}
+
+.ticketbay-input--writen_successful:focus,
+.ticketbay-input--writing_successful:focus {
+  border-color: var(--color-green-6);
+  box-shadow: 0 0 0 3px rgba(64, 192, 87, 0.1);
+}
+
+/* Disabled States */
+.ticketbay-input--disabled,
+.ticketbay-input--disabled_medium {
+  border-color: var(--color-gray-300);
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-500);
+  cursor: not-allowed;
+}
+
+.ticketbay-input--disabled::placeholder,
+.ticketbay-input--disabled_medium::placeholder {
+  color: var(--color-gray-400);
+}
+
+.ticketbay-input--disabled:hover,
+.ticketbay-input--disabled_medium:hover {
+  border-color: var(--color-gray-300);
+}
+
+.ticketbay-input--disabled:focus,
+.ticketbay-input--disabled_medium:focus {
+  border-color: var(--color-gray-300);
+  box-shadow: none;
+}
+
+/* Message Styles */
+.ticketbay-input__message {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.ticketbay-input__message--error {
+  color: var(--color-red-6);
+}
+
+.ticketbay-input__message--success {
+  color: var(--color-green-6);
+}
+
+/* Input Container States */
+.ticketbay-input-container--empty_error .ticketbay-input__label,
+.ticketbay-input-container--writing_error .ticketbay-input__label,
+.ticketbay-input-container--writen_error .ticketbay-input__label {
+  color: var(--color-red-6);
+}
+
+.ticketbay-input-container--writen_successful .ticketbay-input__label,
+.ticketbay-input-container--writing_successful .ticketbay-input__label {
+  color: var(--color-green-6);
+}
+
+.ticketbay-input-container--disabled .ticketbay-input__label,
+.ticketbay-input-container--disabled_medium .ticketbay-input__label {
+  color: var(--color-gray-500);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ticketbay-input--mobile {
+    min-height: 52px;
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+}
