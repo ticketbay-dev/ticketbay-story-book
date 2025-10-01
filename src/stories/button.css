@@ -1,0 +1,289 @@
+/* Ticketbay Button Component - Based on Figma mo/btn/large */
+
+/* Import Colors Variables */
+:root {
+  --color-white: #fff;
+  --color-gray-0: #f8f9fa;
+  --color-gray-100: #f1f3f5;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #adb5bd;
+  --color-gray-600: #868e96;
+  --color-gray-700: #495057;
+  --color-gray-800: #343a40;
+  --color-gray-900: #20212b;
+  --color-black: #000;
+  --color-ticket-magenta: #ff0078;
+  --color-ticket-magenta-l: #ff64a0;
+  --color-ticket-magenta-d: #eb005a;
+  --color-orange-6: #fd7e14;
+  --color-orange-7: #f76707;
+  --color-violet-6: #7950f2;
+  --color-violet-7: #7048e8;
+  --color-blue-6: #228be6;
+  --color-blue-7: #1c7ed6;
+  --color-kakao: #fee500;
+  --color-naver: #03c75a;
+}
+
+.ticketbay-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  min-height: 56px;
+  padding: 16px 24px;
+  font-size: 16px;
+}
+
+.ticketbay-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ticketbay-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ticketbay-button--disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Size - Large (mo/btn/large) */
+.ticketbay-button--large {
+  min-height: 56px;
+  padding: 16px 24px;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+/* Style Variants */
+
+/* Solid Style */
+.ticketbay-button--solid.ticketbay-button--primary {
+  background-color: var(--color-ticket-magenta);
+  color: var(--color-white);
+}
+
+.ticketbay-button--solid.ticketbay-button--primary:hover {
+  background-color: var(--color-ticket-magenta-d);
+}
+
+.ticketbay-button--solid.ticketbay-button--secondary {
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-800);
+}
+
+.ticketbay-button--solid.ticketbay-button--secondary:hover {
+  background-color: var(--color-gray-300);
+}
+
+.ticketbay-button--solid.ticketbay-button--gray {
+  background-color: var(--color-gray-600);
+  color: var(--color-white);
+}
+
+.ticketbay-button--solid.ticketbay-button--gray:hover {
+  background-color: var(--color-gray-700);
+}
+
+.ticketbay-button--solid.ticketbay-button--kakao {
+  background-color: var(--color-kakao);
+  color: var(--color-gray-900);
+}
+
+.ticketbay-button--solid.ticketbay-button--kakao:hover {
+  background-color: #f5dc00;
+}
+
+.ticketbay-button--solid.ticketbay-button--other {
+  background-color: var(--color-violet-6);
+  color: var(--color-white);
+}
+
+.ticketbay-button--solid.ticketbay-button--other:hover {
+  background-color: var(--color-violet-7);
+}
+
+/* Outline Style */
+.ticketbay-button--outline.ticketbay-button--primary {
+  background-color: transparent;
+  color: var(--color-ticket-magenta);
+  border: 2px solid var(--color-ticket-magenta);
+}
+
+.ticketbay-button--outline.ticketbay-button--primary:hover {
+  background-color: var(--color-ticket-magenta);
+  color: var(--color-white);
+}
+
+.ticketbay-button--outline.ticketbay-button--secondary {
+  background-color: transparent;
+  color: var(--color-gray-700);
+  border: 2px solid var(--color-gray-300);
+}
+
+.ticketbay-button--outline.ticketbay-button--secondary:hover {
+  background-color: var(--color-gray-100);
+  border-color: var(--color-gray-400);
+}
+
+.ticketbay-button--outline.ticketbay-button--gray {
+  background-color: transparent;
+  color: var(--color-gray-600);
+  border: 2px solid var(--color-gray-600);
+}
+
+.ticketbay-button--outline.ticketbay-button--gray:hover {
+  background-color: var(--color-gray-600);
+  color: var(--color-white);
+}
+
+.ticketbay-button--outline.ticketbay-button--kakao {
+  background-color: transparent;
+  color: var(--color-kakao);
+  border: 2px solid var(--color-kakao);
+}
+
+.ticketbay-button--outline.ticketbay-button--kakao:hover {
+  background-color: var(--color-kakao);
+  color: var(--color-gray-900);
+}
+
+.ticketbay-button--outline.ticketbay-button--other {
+  background-color: transparent;
+  color: var(--color-violet-6);
+  border: 2px solid var(--color-violet-6);
+}
+
+.ticketbay-button--outline.ticketbay-button--other:hover {
+  background-color: var(--color-violet-6);
+  color: var(--color-white);
+}
+
+/* Solid Text Style */
+.ticketbay-button--solid_text {
+  background-color: transparent;
+  border: none;
+  padding: 8px 16px;
+  min-height: auto;
+}
+
+.ticketbay-button--solid_text.ticketbay-button--primary {
+  color: var(--color-ticket-magenta);
+}
+
+.ticketbay-button--solid_text.ticketbay-button--primary:hover {
+  color: var(--color-ticket-magenta-d);
+  background-color: var(--color-ticket-magenta-l);
+  background-color: rgba(255, 0, 120, 0.1);
+}
+
+.ticketbay-button--solid_text.ticketbay-button--secondary {
+  color: var(--color-gray-600);
+}
+
+.ticketbay-button--solid_text.ticketbay-button--secondary:hover {
+  color: var(--color-gray-800);
+  background-color: var(--color-gray-100);
+}
+
+/* Solid Badge Style */
+.ticketbay-button--solid_badge {
+  min-height: 32px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 16px;
+  font-weight: 500;
+}
+
+.ticketbay-button--solid_badge.ticketbay-button--primary {
+  background-color: var(--color-ticket-magenta);
+  color: var(--color-white);
+}
+
+.ticketbay-button--solid_badge.ticketbay-button--secondary {
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-700);
+}
+
+/* Outline Badge Style */
+.ticketbay-button--outline_badge {
+  min-height: 32px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 16px;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+.ticketbay-button--outline_badge.ticketbay-button--primary {
+  background-color: transparent;
+  color: var(--color-ticket-magenta);
+  border-color: var(--color-ticket-magenta);
+}
+
+.ticketbay-button--outline_badge.ticketbay-button--secondary {
+  background-color: transparent;
+  color: var(--color-gray-600);
+  border-color: var(--color-gray-300);
+}
+
+/* Outline Icon Style */
+.ticketbay-button--outline_icn {
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 2px solid;
+  border-radius: 8px;
+}
+
+.ticketbay-button--outline_icn.ticketbay-button--primary {
+  background-color: transparent;
+  color: var(--color-ticket-magenta);
+  border-color: var(--color-ticket-magenta);
+}
+
+.ticketbay-button--outline_icn.ticketbay-button--secondary {
+  background-color: transparent;
+  color: var(--color-gray-600);
+  border-color: var(--color-gray-300);
+}
+
+/* SNS Style */
+.ticketbay-button--sns {
+  min-height: 48px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.ticketbay-button--sns.ticketbay-button--kakao {
+  background-color: var(--color-kakao);
+  color: var(--color-gray-900);
+}
+
+.ticketbay-button--sns.ticketbay-button--other {
+  background-color: var(--color-blue-6);
+  color: var(--color-white);
+}
+
+/* Button Label */
+.ticketbay-button__label {
+  display: inline-block;
+  font-weight: inherit;
+}
