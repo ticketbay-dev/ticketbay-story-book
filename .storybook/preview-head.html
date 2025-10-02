@@ -1,0 +1,25 @@
+<!-- React 19 compatibility fixes -->
+<script>
+  // Ensure React is available globally for Storybook
+  window.global = window.global || window;
+  
+  // Handle potential React 19 context issues
+  if (!window.React) {
+    window.React = {};
+  }
+</script>
+
+<!-- Add any custom head content for stories -->
+<style>
+  /* Ensure consistent font rendering */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Prevent layout shifts in Storybook */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+</style>
