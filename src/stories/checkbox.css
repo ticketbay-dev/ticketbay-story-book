@@ -1,0 +1,98 @@
+/* Ticketbay Checkbox Component */
+
+.ticketbay-checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ticketbay-checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.ticketbay-checkbox-container--disabled .ticketbay-checkbox-wrapper {
+  cursor: not-allowed;
+}
+
+.ticketbay-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ticketbay-checkbox-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 2px solid var(--gray-300, #dee2e6);
+  background-color: var(--white, #fff);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.ticketbay-checkbox-box--small { width: 16px; height: 16px; }
+.ticketbay-checkbox-box--medium { width: 20px; height: 20px; }
+.ticketbay-checkbox-box--large { width: 24px; height: 24px; }
+
+.ticketbay-checkbox-box--ticket-magenta.ticketbay-checkbox-box--checked {
+  background-color: var(--ticket-magenta, #ff0078);
+  border-color: var(--ticket-magenta, #ff0078);
+  color: var(--white, #fff);
+}
+
+.ticketbay-checkbox-box--blue-6.ticketbay-checkbox-box--checked {
+  background-color: var(--blue-6, #228be6);
+  border-color: var(--blue-6, #228be6);
+  color: var(--white, #fff);
+}
+
+.ticketbay-checkbox-box--green-6.ticketbay-checkbox-box--checked {
+  background-color: var(--green-6, #40c057);
+  border-color: var(--green-6, #40c057);
+  color: var(--white, #fff);
+}
+
+.ticketbay-checkbox-box--disabled {
+  background-color: var(--gray-100, #f1f3f5);
+  border-color: var(--gray-200, #e9ecef);
+  color: var(--gray-400, #ced4da);
+}
+
+.ticketbay-checkbox-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.ticketbay-checkbox-label {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray-800, #343a40);
+  cursor: pointer;
+}
+
+.ticketbay-checkbox-label--disabled {
+  color: var(--gray-400, #ced4da);
+  cursor: not-allowed;
+}
+
+.ticketbay-checkbox-required {
+  color: var(--red-6, #fa5252);
+  margin-left: 2px;
+}
+
+.ticketbay-checkbox-helper {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--gray-600, #868e96);
+}
+
+.ticketbay-checkbox-helper--error {
+  color: var(--red-6, #fa5252);
+}

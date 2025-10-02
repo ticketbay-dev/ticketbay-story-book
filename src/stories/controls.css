@@ -1,0 +1,595 @@
+/* Ticketbay Controls Components - Combined CSS */
+
+/* Import Ticketbay Colors */
+:root {
+  /* Base Colors */
+  --white: #fff;
+  --black: #000;
+  
+  /* Gray Scale */
+  --gray-0: #f8f9fa;
+  --gray-100: #f1f3f5;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #868e96;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #20212b;
+  
+  /* Ticketbay Brand Colors */
+  --ticket-magenta: #ff0078;
+  --ticket-magenta-l: #ff64a0;
+  --ticket-magenta-d: #eb005a;
+  --ticket-yellow: #ffdc00;
+  --ticket-cyan: #00dcff;
+  
+  /* Semantic Colors */
+  --blue-6: #228be6;
+  --green-6: #40c057;
+  --red-6: #fa5252;
+  
+  /* Typography */
+  --font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+/* ========== CHECKBOX STYLES ========== */
+.ticketbay-checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ticketbay-checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.ticketbay-checkbox-container--disabled .ticketbay-checkbox-wrapper {
+  cursor: not-allowed;
+}
+
+.ticketbay-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ticketbay-checkbox-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 2px solid var(--gray-300);
+  background-color: var(--white);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+/* Checkbox sizes */
+.ticketbay-checkbox-box--small { width: 16px; height: 16px; }
+.ticketbay-checkbox-box--medium { width: 20px; height: 20px; }
+.ticketbay-checkbox-box--large { width: 24px; height: 24px; }
+
+/* Checkbox colors */
+.ticketbay-checkbox-box--ticket-magenta.ticketbay-checkbox-box--checked {
+  background-color: var(--ticket-magenta);
+  border-color: var(--ticket-magenta);
+  color: var(--white);
+}
+
+.ticketbay-checkbox-box--blue-6.ticketbay-checkbox-box--checked {
+  background-color: var(--blue-6);
+  border-color: var(--blue-6);
+  color: var(--white);
+}
+
+.ticketbay-checkbox-box--green-6.ticketbay-checkbox-box--checked {
+  background-color: var(--green-6);
+  border-color: var(--green-6);
+  color: var(--white);
+}
+
+.ticketbay-checkbox-box--disabled {
+  background-color: var(--gray-100);
+  border-color: var(--gray-200);
+  color: var(--gray-400);
+}
+
+.ticketbay-checkbox-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.ticketbay-checkbox-label {
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray-800);
+  cursor: pointer;
+}
+
+.ticketbay-checkbox-label--disabled {
+  color: var(--gray-400);
+  cursor: not-allowed;
+}
+
+.ticketbay-checkbox-required {
+  color: var(--red-6);
+  margin-left: 2px;
+}
+
+.ticketbay-checkbox-helper {
+  font-family: var(--font-family);
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--gray-600);
+}
+
+.ticketbay-checkbox-helper--error {
+  color: var(--red-6);
+}
+
+/* ========== RADIO STYLES ========== */
+.ticketbay-radio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ticketbay-radio-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.ticketbay-radio-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ticketbay-radio-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--gray-300);
+  background-color: var(--white);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.ticketbay-radio-circle--small { width: 16px; height: 16px; }
+.ticketbay-radio-circle--medium { width: 20px; height: 20px; }
+.ticketbay-radio-circle--large { width: 24px; height: 24px; }
+
+.ticketbay-radio-dot {
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.ticketbay-radio-circle--small .ticketbay-radio-dot { width: 6px; height: 6px; }
+.ticketbay-radio-circle--medium .ticketbay-radio-dot { width: 8px; height: 8px; }
+.ticketbay-radio-circle--large .ticketbay-radio-dot { width: 10px; height: 10px; }
+
+.ticketbay-radio-circle--ticket-magenta.ticketbay-radio-circle--checked {
+  border-color: var(--ticket-magenta);
+  color: var(--ticket-magenta);
+}
+
+.ticketbay-radio-circle--blue-6.ticketbay-radio-circle--checked {
+  border-color: var(--blue-6);
+  color: var(--blue-6);
+}
+
+.ticketbay-radio-label {
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray-800);
+  cursor: pointer;
+}
+
+.ticketbay-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ticketbay-radio-group-options--vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ticketbay-radio-group-options--horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ========== TOGGLE STYLES ========== */
+.ticketbay-toggle-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ticketbay-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ticketbay-toggle-wrapper--left {
+  flex-direction: row-reverse;
+}
+
+.ticketbay-toggle-switch {
+  position: relative;
+  display: inline-block;
+}
+
+.ticketbay-toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ticketbay-toggle-track {
+  position: relative;
+  background-color: var(--gray-300);
+  border-radius: 20px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.ticketbay-toggle-switch--small .ticketbay-toggle-track { width: 32px; height: 18px; }
+.ticketbay-toggle-switch--medium .ticketbay-toggle-track { width: 40px; height: 22px; }
+.ticketbay-toggle-switch--large .ticketbay-toggle-track { width: 48px; height: 26px; }
+
+.ticketbay-toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: var(--white);
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticketbay-toggle-switch--small .ticketbay-toggle-thumb { width: 14px; height: 14px; }
+.ticketbay-toggle-switch--medium .ticketbay-toggle-thumb { width: 18px; height: 18px; }
+.ticketbay-toggle-switch--large .ticketbay-toggle-thumb { width: 22px; height: 22px; }
+
+.ticketbay-toggle-switch--checked .ticketbay-toggle-track {
+  background-color: var(--ticket-magenta);
+}
+
+.ticketbay-toggle-switch--checked.ticketbay-toggle-switch--small .ticketbay-toggle-thumb {
+  transform: translateX(14px);
+}
+
+.ticketbay-toggle-switch--checked.ticketbay-toggle-switch--medium .ticketbay-toggle-thumb {
+  transform: translateX(18px);
+}
+
+.ticketbay-toggle-switch--checked.ticketbay-toggle-switch--large .ticketbay-toggle-thumb {
+  transform: translateX(22px);
+}
+
+/* ========== QUANTITY STYLES ========== */
+.ticketbay-quantity-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ticketbay-quantity-control {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray-300);
+  border-radius: 6px;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.ticketbay-quantity-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--gray-100);
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ticketbay-quantity-button--small { width: 32px; height: 32px; }
+.ticketbay-quantity-button--medium { width: 40px; height: 40px; }
+.ticketbay-quantity-button--large { width: 48px; height: 48px; }
+
+.ticketbay-quantity-button:hover:not(:disabled) {
+  background-color: var(--gray-200);
+  color: var(--gray-800);
+}
+
+.ticketbay-quantity-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.ticketbay-quantity-input,
+.ticketbay-quantity-display {
+  border: none;
+  outline: none;
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 500;
+  background-color: transparent;
+}
+
+.ticketbay-quantity-input--small,
+.ticketbay-quantity-display--small {
+  width: 60px;
+  height: 32px;
+  font-size: 14px;
+}
+
+.ticketbay-quantity-input--medium,
+.ticketbay-quantity-display--medium {
+  width: 80px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.ticketbay-quantity-input--large,
+.ticketbay-quantity-display--large {
+  width: 100px;
+  height: 48px;
+  font-size: 18px;
+}
+
+/* ========== CHIPS STYLES ========== */
+.ticketbay-chips-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ticketbay-chips-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ticketbay-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--gray-300);
+  border-radius: 20px;
+  background-color: var(--white);
+  font-family: var(--font-family);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ticketbay-chip--small { padding: 4px 12px; font-size: 12px; }
+.ticketbay-chip--medium { padding: 6px 16px; font-size: 14px; }
+.ticketbay-chip--large { padding: 8px 20px; font-size: 16px; }
+
+.ticketbay-chip--outlined.ticketbay-chip--selected {
+  border-color: var(--ticket-magenta);
+  color: var(--ticket-magenta);
+  background-color: var(--white);
+}
+
+.ticketbay-chip--filled.ticketbay-chip--selected {
+  border-color: var(--ticket-magenta);
+  background-color: var(--ticket-magenta);
+  color: var(--white);
+}
+
+.ticketbay-chip--soft.ticketbay-chip--selected {
+  border-color: var(--ticket-magenta);
+  background-color: #ffe8f4;
+  color: var(--ticket-magenta);
+}
+
+/* ========== PAYMENT METHOD STYLES ========== */
+.ticketbay-payment-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ticketbay-payment-options--list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ticketbay-payment-options--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.ticketbay-payment-option {
+  position: relative;
+  border: 2px solid var(--gray-200);
+  border-radius: 8px;
+  background-color: var(--white);
+  transition: all 0.2s ease;
+}
+
+.ticketbay-payment-option--selected {
+  border-color: var(--ticket-magenta);
+  background-color: #ffe8f4;
+}
+
+.ticketbay-payment-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ticketbay-payment-option-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.ticketbay-payment-option-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.ticketbay-payment-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticketbay-payment-title {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-800);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ticketbay-payment-badge {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 8px;
+  background-color: var(--ticket-magenta);
+  color: var(--white);
+  border-radius: 10px;
+}
+
+/* ========== FILTER ANCHOR STYLES ========== */
+.ticketbay-filter-container {
+  width: 100%;
+}
+
+.ticketbay-filter-container--scrollable {
+  overflow-x: auto;
+}
+
+.ticketbay-filter-list {
+  display: flex;
+  gap: 8px;
+  min-width: max-content;
+}
+
+.ticketbay-filter-list--scrollable {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.ticketbay-filter-list--scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+.ticketbay-filter-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-family);
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.ticketbay-filter-item--tabs {
+  padding: 12px 0;
+  border-bottom: 2px solid transparent;
+  color: var(--gray-600);
+}
+
+.ticketbay-filter-item--tabs.ticketbay-filter-item--selected {
+  color: var(--ticket-magenta);
+  border-bottom-color: var(--ticket-magenta);
+}
+
+.ticketbay-filter-item--pills {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--gray-300);
+  background-color: var(--white);
+  color: var(--gray-700);
+}
+
+.ticketbay-filter-item--pills.ticketbay-filter-item--selected {
+  border-color: var(--ticket-magenta);
+  background-color: var(--ticket-magenta);
+  color: var(--white);
+}
+
+.ticketbay-filter-item--links {
+  padding: 8px 12px;
+  color: var(--gray-600);
+  text-decoration: underline;
+}
+
+.ticketbay-filter-item--links.ticketbay-filter-item--selected {
+  color: var(--ticket-magenta);
+  font-weight: 600;
+}
+
+.ticketbay-filter-count {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 6px;
+  background-color: var(--gray-200);
+  color: var(--gray-700);
+  border-radius: 10px;
+}
+
+.ticketbay-filter-item--selected .ticketbay-filter-count {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: currentColor;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ticketbay-payment-options--grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ticketbay-radio-group-options--horizontal {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .ticketbay-chips-group {
+    gap: 6px;
+  }
+}
